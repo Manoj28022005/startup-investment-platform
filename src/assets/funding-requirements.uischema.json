@@ -1,0 +1,107 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Group",
+      "label": "Funding Details",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/fundingStage",
+          "options": {
+            "format": "radio"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/amountRequired",
+          "options": {
+            "slider": true,
+            "showCurrentValue": true,
+            "unit": "$"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Fund Allocation",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/useOfFunds/properties/research",
+          "options": {
+            "slider": true,
+            "showCurrentValue": true,
+            "unit": "%"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/useOfFunds/properties/marketing",
+          "options": {
+            "slider": true,
+            "showCurrentValue": true,
+            "unit": "%"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/useOfFunds/properties/hiring",
+          "options": {
+            "slider": true,
+            "showCurrentValue": true,
+            "unit": "%"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/useOfFunds/properties/operations",
+          "options": {
+            "slider": true,
+            "showCurrentValue": true,
+            "unit": "%"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/useOfFunds/properties/other",
+          "options": {
+            "slider": true,
+            "showCurrentValue": true,
+            "unit": "%"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Timeline & History",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/timelineToRaise"
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/previouslyRaised"
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/previousInvestors",
+          "rule": {
+            "effect": "SHOW",
+            "condition": {
+              "scope": "#/properties/previouslyRaised",
+              "schema": { "const": true }
+            }
+          },
+          "options": {
+            "multi": true,
+            "placeholder": "List your previous investors"
+          }
+        }
+      ]
+    }
+  ]
+}

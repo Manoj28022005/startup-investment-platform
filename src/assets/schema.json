@@ -1,60 +1,30 @@
 {
-  "definitions": {
-    "order": {
-      "type": "object",
-      "properties": {
-        "customer": {
-          "type": "object",
-          "properties": {
-            "id": { "type": "string" },
-            "name": { "type": "string"},
-            "department": { "type": "string" },
-            "emailAddress": { "type": "string", "format": "email" }
-          }
-        },
-        "title": {
-          "type": "string",
-          "minLength": 5
-        },
-        "description": {
-          "type": "string"
-        },
-        "ordered": { "type": "boolean" },
-        "processId": {
-          "type": "number",
-          "minimum": 0
-        },
-        "assignee": { "type": "string" },
-        "startDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "endDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "status": {
-          "type": "string",
-          "enum": ["unordered", "planned", "ordered"]
-        },
-        "amount": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 100,
-          "default": 10,
-          "multipleOf": 1
-        }
-      }
-    }
-  },
   "type": "object",
   "properties": {
-    "orders": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/order"
-      }
+    "startupName": {
+      "type": "string",
+      "title": "Startup Name"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "title": "Website"
+    },
+    "industry": {
+      "type": "string",
+      "title": "Industry"
+    },
+    "foundedYear": {
+      "type": "integer",
+      "title": "Founded Year",
+      "minimum": 1900,
+      "maximum": 2100
+    },
+    "foundersCount": {
+      "type": "integer",
+      "title": "Number of Founders",
+      "minimum": 1
     }
   },
-  "required": ["title"]
+  "required": ["startupName", "website", "industry", "foundedYear", "foundersCount"]
 }

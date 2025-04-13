@@ -1,0 +1,69 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Group",
+      "label": "Pitch Overview",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/pitchType",
+          "options": {
+            "format": "radio"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/pitchSummary",
+          "options": {
+            "multi": true,
+            "placeholder": "Briefly describe your startup's core idea"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Problem & Solution",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/problemStatement",
+          "options": {
+            "multi": true,
+            "placeholder": "What problem does your startup solve?"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/solutionSummary",
+          "options": {
+            "multi": true,
+            "placeholder": "How does your solution address this problem?"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/uniqueSellingPoint",
+          "options": {
+            "multi": true,
+            "placeholder": "What makes your solution unique?"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Supporting Documents",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/pitchDeck",
+          "options": {
+            "accept": "application/pdf"
+          }
+        }
+      ]
+    }
+  ]
+}

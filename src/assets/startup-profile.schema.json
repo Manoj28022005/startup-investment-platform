@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "title": "Startup Profile",
+  "description": "Tell us about your startup",
+  "properties": {
+    "startupName": {
+      "type": "string",
+      "title": "Startup Name",
+      "description": "The name of your startup",
+      "minLength": 2
+    },
+    "websiteUrl": {
+      "type": "string",
+      "title": "Website URL",
+      "description": "Your startup's website",
+      "format": "uri"
+    },
+    "foundingYear": {
+      "type": "integer",
+      "title": "Founding Year",
+      "minimum": 1900,
+      "maximum": 2025
+    },
+    "industryType": {
+      "type": "string",
+      "title": "Industry Type",
+      "enum": [
+        "FinTech",
+        "HealthTech",
+        "EdTech",
+        "E-commerce",
+        "SaaS",
+        "AI/ML",
+        "Blockchain",
+        "IoT",
+        "CleanTech",
+        "Other"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "title": "Location",
+      "description": "City or address where your startup is based"
+    },
+    "teamSize": {
+      "type": "string",
+      "title": "Team Size",
+      "enum": [
+        "<5",
+        "5-10",
+        "11-50",
+        "50+"
+      ]
+    },
+    "startupStage": {
+      "type": "string",
+      "title": "Startup Stage",
+      "enum": [
+        "Idea",
+        "Prototype",
+        "MVP",
+        "Revenue"
+      ]
+    }
+  },
+  "required": [
+    "startupName",
+    "industryType",
+    "startupStage"
+  ]
+}

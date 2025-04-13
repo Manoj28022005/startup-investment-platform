@@ -1,0 +1,69 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Group",
+      "label": "Basic Information",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/startupName",
+          "options": {
+            "placeholder": "Enter your startup name"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/websiteUrl",
+          "options": {
+            "placeholder": "https://your-startup.com"
+          }
+        },
+        {
+          "type": "HorizontalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/foundingYear",
+              "options": {
+                "slider": true,
+                "showCurrentValue": true
+              }
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/teamSize"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Industry & Stage",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/industryType",
+          "options": {
+            "format": "radio"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/location",
+          "options": {
+            "placeholder": "City, Country"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/startupStage",
+          "options": {
+            "format": "radio"
+          }
+        }
+      ]
+    }
+  ]
+}

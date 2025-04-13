@@ -1,0 +1,134 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Group",
+      "label": "Basic Information",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/startupName",
+          "options": {
+            "placeholder": "Enter your startup name"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/industry",
+          "options": {
+            "format": "radio"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/oneLiner",
+          "options": {
+            "placeholder": "Describe your startup in one line"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Problem & Solution",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/problem",
+          "options": {
+            "multi": true,
+            "placeholder": "What problem are you solving?"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/solution",
+          "options": {
+            "multi": true,
+            "placeholder": "How does your solution address this problem?"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Market Analysis",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/targetMarket/properties/marketSize",
+          "options": {
+            "detail": "Enter market size in millions USD"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/targetMarket/properties/customerSegments",
+          "options": {
+            "detail": "List your key customer segments",
+            "addButtonLabel": "Add Customer Segment"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Business Model",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/businessModel/properties/revenueStreams",
+          "options": {
+            "detail": "How do you make money?",
+            "addButtonLabel": "Add Revenue Stream"
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/businessModel/properties/costStructure",
+          "options": {
+            "detail": "What are your main costs?",
+            "addButtonLabel": "Add Cost Item"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Competitive Edge",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/competitiveAdvantage",
+          "options": {
+            "detail": "What makes your solution unique?",
+            "addButtonLabel": "Add Competitive Advantage"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Key Metrics",
+      "elements": [
+        {
+          "type": "HorizontalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/metrics/properties/currentUsers"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/metrics/properties/monthlyGrowthRate"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/metrics/properties/monthlyRevenue"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

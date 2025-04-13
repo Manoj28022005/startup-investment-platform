@@ -1,0 +1,116 @@
+{
+  "type": "object",
+  "title": "Founder Details",
+  "description": "Tell us about the founding team",
+  "properties": {
+    "founderName": {
+      "type": "string",
+      "title": "Founder Name",
+      "minLength": 2,
+      "maxLength": 100,
+      "pattern": "^[a-zA-Z\\s.]+$",
+      "errorMessage": {
+        "pattern": "Name can only contain letters, spaces, and dots",
+        "minLength": "Name must be at least 2 characters long",
+        "maxLength": "Name cannot exceed 100 characters"
+      }
+    },
+    "founderEmail": {
+      "type": "string",
+      "title": "Founder Email",
+      "format": "email",
+      "errorMessage": {
+        "format": "Please enter a valid email address"
+      }
+    },
+    "linkedinProfile": {
+      "type": "string",
+      "title": "LinkedIn Profile",
+      "pattern": "^(https?:\\/\\/)?(www\\.)?linkedin\\.com\\/in\\/[a-zA-Z0-9-]+\\/?$",
+      "errorMessage": {
+        "pattern": "Please enter a valid LinkedIn profile URL"
+      }
+    },
+    "background": {
+      "type": "string",
+      "title": "Background",
+      "minLength": 2,
+      "maxLength": 500,
+      "errorMessage": {
+        "minLength": "Background must be at least 2 characters long",
+        "maxLength": "Background cannot exceed 500 characters"
+      }
+    },
+    "hasCoFounders": {
+      "type": "boolean",
+      "title": "Do you have co-founders?"
+    },
+    "coFounders": {
+      "type": "array",
+      "title": "Co-founder Details",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 2,
+            "maxLength": 100,
+            "pattern": "^[a-zA-Z\\s.]+$",
+            "errorMessage": {
+              "pattern": "Name can only contain letters, spaces, and dots",
+              "minLength": "Name must be at least 2 characters long",
+              "maxLength": "Name cannot exceed 100 characters"
+            }
+          },
+          "email": {
+            "type": "string",
+            "title": "Email",
+            "format": "email",
+            "errorMessage": {
+              "format": "Please enter a valid email address"
+            }
+          },
+          "role": {
+            "type": "string",
+            "title": "Role",
+            "enum": [
+              "CEO",
+              "CTO",
+              "CFO",
+              "COO",
+              "CMO",
+              "Other"
+            ],
+            "errorMessage": "Please select a valid role"
+          },
+          "background": {
+            "type": "string",
+            "title": "Background",
+            "minLength": 2,
+            "maxLength": 500,
+            "errorMessage": {
+              "minLength": "Background must be at least 2 characters long",
+              "maxLength": "Background cannot exceed 500 characters"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "role"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 5,
+      "errorMessage": {
+        "minItems": "Please add at least one co-founder",
+        "maxItems": "Cannot add more than 5 co-founders"
+      }
+    }
+  },
+  "required": [
+    "founderName",
+    "founderEmail"
+  ]
+}

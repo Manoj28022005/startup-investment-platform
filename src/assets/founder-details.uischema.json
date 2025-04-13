@@ -1,0 +1,101 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Group",
+      "label": "Primary Founder",
+      "elements": [
+        {
+          "type": "HorizontalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/founderName",
+              "options": {
+                "placeholder": "Full Name"
+              }
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/founderEmail",
+              "options": {
+                "placeholder": "email@example.com"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/linkedinProfile",
+          "options": {
+            "placeholder": "https://linkedin.com/in/..."
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/background",
+          "options": {
+            "multi": true,
+            "placeholder": "Share your educational and professional background"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Co-founders",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/hasCoFounders"
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/coFounders",
+          "rule": {
+            "effect": "SHOW",
+            "condition": {
+              "scope": "#/properties/hasCoFounders",
+              "schema": { "const": true }
+            }
+          },
+          "options": {
+            "detail": {
+              "type": "VerticalLayout",
+              "elements": [
+                {
+                  "type": "HorizontalLayout",
+                  "elements": [
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/name"
+                    },
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/email"
+                    }
+                  ]
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/role",
+                  "options": {
+                    "format": "radio"
+                  }
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/background",
+                  "options": {
+                    "multi": true
+                  }
+                }
+              ]
+            },
+            "addButtonLabel": "Add Co-founder"
+          }
+        }
+      ]
+    }
+  ]
+}

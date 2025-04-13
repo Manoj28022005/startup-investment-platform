@@ -1,0 +1,176 @@
+{
+  "type": "object",
+  "title": "Pitch Information",
+  "description": "Please provide information about your startup",
+  "properties": {
+    "startupName": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 50,
+      "title": "Startup Name",
+      "description": "The name of your startup company"
+    },
+    "industry": {
+      "type": "string",
+      "enum": [
+        "Technology",
+        "Healthcare",
+        "Finance",
+        "Education",
+        "E-commerce",
+        "Manufacturing",
+        "Real Estate",
+        "Energy",
+        "Transportation",
+        "Agriculture",
+        "Other"
+      ],
+      "title": "Industry",
+      "description": "Select the primary industry of your startup"
+    },
+    "oneLiner": {
+      "type": "string",
+      "maxLength": 100,
+      "title": "One-Line Pitch",
+      "description": "Describe your startup in one compelling sentence"
+    },
+    "problem": {
+      "type": "string",
+      "title": "Problem Statement",
+      "description": "What problem does your startup solve?"
+    },
+    "solution": {
+      "type": "string",
+      "title": "Solution",
+      "description": "How does your product/service solve this problem?"
+    },
+    "targetMarket": {
+      "type": "object",
+      "title": "Target Market",
+      "properties": {
+        "marketSize": {
+          "type": "object",
+          "properties": {
+            "tam": {
+              "type": "number",
+              "title": "Total Addressable Market (TAM)",
+              "description": "Total market size in millions USD",
+              "minimum": 0
+            },
+            "sam": {
+              "type": "number",
+              "title": "Serviceable Addressable Market (SAM)",
+              "description": "Serviceable market size in millions USD",
+              "minimum": 0
+            },
+            "som": {
+              "type": "number",
+              "title": "Serviceable Obtainable Market (SOM)",
+              "description": "Target market share in millions USD",
+              "minimum": 0
+            }
+          },
+          "required": ["tam", "sam", "som"]
+        },
+        "customerSegments": {
+          "type": "array",
+          "title": "Customer Segments",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 5
+        }
+      }
+    },
+    "businessModel": {
+      "type": "object",
+      "title": "Business Model",
+      "properties": {
+        "revenueStreams": {
+          "type": "array",
+          "title": "Revenue Streams",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "string",
+                "title": "Revenue Source"
+              },
+              "model": {
+                "type": "string",
+                "enum": [
+                  "Subscription",
+                  "One-time Purchase",
+                  "Usage-based",
+                  "Licensing",
+                  "Advertising",
+                  "Other"
+                ]
+              }
+            },
+            "required": ["source", "model"]
+          }
+        },
+        "costStructure": {
+          "type": "array",
+          "title": "Key Costs",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "competitiveAdvantage": {
+      "type": "array",
+      "title": "Competitive Advantages",
+      "description": "What makes your solution unique?",
+      "items": {
+        "type": "object",
+        "properties": {
+          "advantage": {
+            "type": "string",
+            "title": "Advantage"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": ["advantage", "description"]
+      },
+      "minItems": 1
+    },
+    "metrics": {
+      "type": "object",
+      "title": "Key Metrics",
+      "properties": {
+        "currentUsers": {
+          "type": "number",
+          "title": "Current Users/Customers",
+          "minimum": 0
+        },
+        "monthlyGrowthRate": {
+          "type": "number",
+          "title": "Monthly Growth Rate (%)",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "monthlyRevenue": {
+          "type": "number",
+          "title": "Monthly Revenue (USD)",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "required": [
+    "startupName",
+    "industry",
+    "oneLiner",
+    "problem",
+    "solution",
+    "targetMarket",
+    "businessModel",
+    "competitiveAdvantage"
+  ]
+}

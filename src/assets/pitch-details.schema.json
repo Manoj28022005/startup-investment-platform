@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "title": "Pitch Information",
+  "description": "Tell us about your startup's pitch",
+  "properties": {
+    "pitchType": {
+      "type": "string",
+      "title": "Pitch Type",
+      "enum": [
+        "Elevator",
+        "Deck",
+        "Video",
+        "Doc"
+      ]
+    },
+    "pitchSummary": {
+      "type": "string",
+      "title": "Pitch Summary",
+      "description": "1-2 line summary of your idea",
+      "maxLength": 200
+    },
+    "problemStatement": {
+      "type": "string",
+      "title": "Problem Statement",
+      "description": "What problem are you solving?",
+      "maxLength": 1000
+    },
+    "solutionSummary": {
+      "type": "string",
+      "title": "Solution Summary",
+      "description": "How are you solving the problem?",
+      "maxLength": 1000
+    },
+    "uniqueSellingPoint": {
+      "type": "string",
+      "title": "Unique Selling Point",
+      "description": "What makes your solution different?",
+      "maxLength": 500
+    },
+    "pitchDeck": {
+      "type": "string",
+      "title": "Pitch Deck",
+      "description": "Upload your pitch deck (PDF only)",
+      "contentMediaType": "application/pdf",
+      "contentEncoding": "base64"
+    }
+  },
+  "required": [
+    "pitchType",
+    "pitchSummary"
+  ]
+}
