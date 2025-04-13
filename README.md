@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Startup Investment Platform
 
 A comprehensive platform for startups to create profiles, pitch to investors, and for investors to discover promising ventures. Built with Angular and JSON Forms for dynamic form generation and validation.
@@ -143,3 +144,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Built with [Angular](https://angular.io/)
 - Forms powered by [JSON Forms](https://jsonforms.io/)
 - UI components from [Angular Material](https://material.angular.io/)
+=======
+# startup-investment-platform
+>>>>>>> 571dab2e49f11a8aedc931284ba031fb7c78683a
