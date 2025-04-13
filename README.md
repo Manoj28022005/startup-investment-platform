@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Startup Investment Platform
 
 A comprehensive platform for startups to create profiles, pitch to investors, and for investors to discover promising ventures. Built with Angular and JSON Forms for dynamic form generation and validation.
@@ -135,9 +135,6 @@ npm run build --configuration production
 
 Build artifacts will be stored in the `dist/` directory.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
@@ -146,4 +143,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - UI components from [Angular Material](https://material.angular.io/)
 =======
 # startup-investment-platform
->>>>>>> 571dab2e49f11a8aedc931284ba031fb7c78683a
+
